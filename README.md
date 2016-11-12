@@ -62,3 +62,6 @@ AA) GDOLLAR is platform independant language
 BB) GDOLLAR is an interactive Technology.
 CC) GDOLLAR  is   used  only  in  companies  and  industries.
 DD)  GDollar  is used   in  compiler design  and  datastructures construction.
+
+
+Note:gdollar project is started at google code and it is modified at github.
