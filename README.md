@@ -2,6 +2,9 @@
 ===========
 
  GDOLLAR Programming Language  is a modern Programming Language consists of JAVA OOPS, Behave like C/C++ OOPS, Networking, RUN and compile at same time,used in Software Developement  , Research, and ,Advanced OOPs. It is used in case of  constructing  datastructures,etc.
+ 
+ GDollar  is   invented   in  C/C++, JAVA , and , C#.
+ 
 
 SYNTAX FOR GDOLLAR (.GDOLLAR) (beautiful syntax)
 ---------------------------------------------------------------
