@@ -66,4 +66,27 @@ CC) GDOLLAR  is   used  only  in  companies  and  industries.
 DD)  GDollar  is used   in  compiler design  and  datastructures construction.
 
 
+ABOUT GDollar p.L
+==================
+
+GDollar P.l is   a  Big P.L.
+
+
+It is  divided  in  5  big modules.
+
+ 
+GDollar modules
+===============
+
+a)  GDollar -CDollar(cdollarv.4,cdollar)
+
+b) GDollar - CJAVA
+
+c)  Gdollar -Compiler Design
+
+d)  GDollar -Advanced OOPS (CWE -Editor)
+
+e) GDollar -JSTAR  ; used  only  for  security   webdesign work without  internet connection.
+
+
 Note:gdollar project is started at google code and it is modified at github.
