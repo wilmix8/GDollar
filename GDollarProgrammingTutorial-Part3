@@ -1,0 +1,623 @@
+ABOUT   GDOllar-CDollar Advanced  Datastructures
+===============================================
+
+a) ARRAYLINEARLIST EXAMPLE
+==========================
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+LinearList x <NEW> <ArrayLinearList>();
+// size
+<PRINTLN>("Initial size is " + x.size());
+// isEmpty
+if (x.isEmpty())
+<PRINTLN>("The list is empty");
+else <PRINTLN>("The list is not empty");
+// add
+x.add(0, (2));
+x.add(1, (6)); //add 6 at 1th location
+x.add(0, (1));
+x.add(2, (4));
+<PRINTLN>("List size is " + x.size());
+// toString
+<PRINTLN>("The list is " + x);
+// indexOf
+int index = x.indexOf( (4));
+if (index < 0)
+<PRINTLN>("4 not found");
+else <PRINTLN>("The index of 4 is " + index);
+index = x.indexOf( (3));
+if (index < 0)
+<PRINTLN>("3 not found");
+else <PRINTLN>("The index of 3 is " + index);
+// get element at index
+<PRINTLN>("Element at 0 is " + x.get(0));
+<PRINTLN>("Element at 3 is " + x.get(3));
+// remove element at index
+<PRINTLN>(x.remove(1) + " removed");
+<PRINTLN>("The list is " + x);
+<PRINTLN>(x.remove(2) + " removed");
+<PRINTLN>("The list is " + x);
+if (x.isEmpty())
+<PRINTLN>("The list is empty");
+else <PRINTLN>("The list is not empty");
+<PRINTLN>("List size is " + x.size());
+%>
+?>
+
+b) ARRAYLIST EXAMPLE
+======================
+<CDollar>
+<USE> CUTIL; //load cutil packages
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<ArrayList> x <NEW> <ArrayList>();
+// size
+<PRINTLN>("Initial size is " + x.size());
+// isEmpty
+if (x.isEmpty())
+<PRINTLN>("The list is empty");
+else <PRINTLN>("The list is not empty");
+// put
+x.add(0, (2));
+x.add(1, (6));
+x.add(0, (1));
+x.add(2, (4));
+<PRINTLN>("List size is " + x.size());
+// toString
+<PRINTLN>("The list is " + x);
+// indexOf
+int index = x.indexOf((4));
+if (index < 0)
+<PRINTLN>("4 not found");
+else <PRINTLN>("The index of 4 is " + index);
+index = x.indexOf((3));
+if (index < 0)
+<PRINTLN>("3 not found");
+else <PRINTLN>("The index of 3 is " + index);
+// get
+<PRINTLN>("Element at 0 is " + x.get(0));
+<PRINTLN>("Element at 3 is " + x.get(3));
+// remove
+<PRINTLN>(x.remove(1) + " removed");
+<PRINTLN>("The list is " + x);
+<PRINTLN>(x.remove(2) + " removed");
+<PRINTLN>("The list is " + x);
+if (x.isEmpty())
+<PRINTLN>("The list is empty");
+else <PRINTLN>("The list is not empty");
+<PRINTLN>("List size is " + x.size());
+%>
+?>
+
+c) ARRAYS in CDollar with Example
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<ARRAYS> u <NEW> <ARRAYS>("Wilmix");
+for (int i=100;i>0;i--)
+u.add(""+i);
+int []a = new int[10];
+for (int i=1;i<=9;i++)
+a[i]=i;
+<PRINTLN>(""+u.ret(45));
+u.ASCENDSORT(); //sort in ascending order
+u.display();
+u.DESCENDSORT(); //sort in descending order
+u.display();
+<PRINTLN>(u.binarySearch(a, 7));
+//perform binary search
+%>
+?>
+
+d) Dictionary in Cdollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<Dictionary> h <NEW> <Dictionary>(11); //allowed size is 11 elements
+h.Add((80), (80));
+h.Add((40), (40));
+h.Add((65), (65));
+h.display();
+h.Add((58), (58));
+h.Add((24), (24));
+h.display();
+h.Add((2), (2));
+h.Add((13), (13));
+h.Add((46), (46));
+h.Add((16), (16));
+h.Add((7), (7));
+h.Add((21), (21));
+h.display();
+<TRY> {h.Add((99), (99));}
+<CATCH> (<EXE> e)
+{<PRINTLN>(" No memory for 99");}
+// update element
+h.Add((7), (29));
+h.display();
+%>
+?>
+
+e) Doubly Linked List in Cdollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<DoublyLinkedList> dll <NEW> <DoublyLinkedList>();
+dll.addFirst(10);
+dll.addFirst(34);
+dll.addLast(56);
+dll.addLast(364);
+dll.iterateForward(); //iterate forwards
+dll.removeFirst();
+dll.removeLast();
+dll.iterateBackward();//iterate backward
+%>
+?>
+
+f) HASHMAP in CDolar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<HASHMAP> h <NEW> <HASHMAP>(8); //allowed fixed size is 8 elements
+h.put(null, null);
+h.put((80), null);
+h.put((80), null);
+h.put((80), (80));
+h.put((40),(40));
+h.put((80), (80));
+h.put((40), (40));
+h.display();
+%>
+?>
+g) HASHSET in CDollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<HASHSET> h <NEW> <HASHSET>(11); // add up to 11 elements
+h.add("ac");
+h.add(5);
+<PRINTLN>(""+h.GET());// print those elements
+%>
+?>
+
+h) LINKEDQUEUE in CDollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<LinkedQueue> q <NEW> <LinkedQueue>(3);
+// add 4 elements
+q.put((1));
+q.put((2));
+q.put((3));
+q.put((4));
+// delete all elements
+while (!q.isEmpty())
+{
+<PRINTLN>("Rear element is " + q.getRearElement());
+<PRINTLN>("Front element is " + q.getFrontElement());
+<PRINTLN>("Removed the element " + q.remove());
+}
+%>
+?>
+
+i) STACK in Cdollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+Linked<STACK> s <NEW> Linked<STACK>();
+// add some elements
+s.<PUSH>((1));
+s.<PUSH>((2));
+s.<PUSH>((3));
+s.<PUSH>((4));
+// delete all elements
+while (!s.empty())
+{
+<PRINTLN>("Top element is " + s.peek());
+<PRINTLN>("Removed the element " + s.<POP>);
+}
+%>
+?>
+
+j) SINGLY LINKED LIST in CDollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<SinglyLinkedList> sl <NEW> <SinglyLinkedList>();
+sl.add(3);
+sl.add(32);
+sl.add(54);
+sl.add(89);
+sl.addAfter(76, 54);
+sl.deleteFront(); //delete front element
+sl.deleteAfter(76);
+sl.traverse();
+%>
+?>
+
+k) Treeset in Cdollar
+
+<CDollar>
+<USE> CUTIL;
+<PACK> DTS
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+<TS> t <NEW> <TS>("wee");
+t.add("13");
+t.add("15");
+t.add("12");
+t.add("1");
+<PRINTLN>(""+t.ASCDisplay()); //display in ascend order
+<PRINTLN>(""+t.DESCDisplay()); //display in descend order
+%>
+?>
+l) HASHTABLE in cdollar
+HashTable h <NEW> HashTable(3); // hash table fixed size is assigned as 3
+h.put(1,18); h.put(2,8980 );
+h.display(); // display hash table elements
+
+m) CDOLLAR MISC PROGRAMS
+
+<CDollar>
+<USE> CUTIL;
+<USE> System.IO;
+<USE> Securitydb;
+<PACK> HierachialTree
+<%
+<CLASS> roots
+{
+public FLOAT CDollar-MAIN()
+{
+LinkedQueue q <NEW> LinkedQueue(3);
+// add a few elements
+q.put((1));
+q.put((2));
+q.put((3));
+q.put((4));
+// delete all elements
+while (!q.isEmpty())
+{
+<PRINTLN>("Rear element is " + q.getRearElement());
+<PRINTLN>("Front element is " + q.getFrontElement());
+<PRINTLN>("Removed the element " + q.remove());
+}
+string[] lines = File.ReadAllLines("out.txt"); // read all lines from file out.txt
+foreach (string line in lines)
+{
+if (line.Length > 80)
+{
+}
+}
+CDollar.WDBA.Manipulation.InsertRows(q.toString(),"wil.txt"); //insert at file wil.txt
+//using cdollar.wdba.manipulation.insertrows
+<PRINTLN>(" OUTput from file= "+CDollar.WDBA.Manipulation.retrieve("wil.txt"));
+// retrieve the contents from file wil.txt.
+<PRINTLN>(""+CDollar.WDBA.Manipulation.retrieve("wil1.txt"));
+Secure.InsertSecure("wil.sdb", 0,"while","while",CDollar.WDBA.Manipulation.retrieve("wil1.txt"));
+// retrieve the contents from wil1.txt and insert in to security file
+wil.sdb
+TreeMap t <NEW> TreeMap("wee");
+//add elements
+t.add("13");
+t.add("15");
+t.add("12");
+t.add("1");
+//add key
+t.addKey("13");
+t.addKey("15");
+t.addKey("12");
+t.addKey("1");
+<PRINTLN>(""+t.RET());
+SortedList h <NEW> SortedList(3); //sort the list
+h.Add((80), (80));
+h.Add((40), (40));
+h.Add((65), (65));
+<PRINTLN>(""+h.RET());
+%>
+?>
+
+Now Write a cdollar program to compute area of rectangle
+using operator overloading?
+
+<CDollar>
+<PACK> Area
+{
+<CLASS> Rectangle
+{
+private double length; // Length of a Rectangle
+private double breadth; // Breadth of a Rectangle
+private double height; // Height of a Rectangle
+public double GETKEYVolume()
+{
+return length * breadth * height;
+}
+public void <SET>Length( double len )
+{
+length = len;
+}
+public void <SET>Breadth( double bre )
+{
+breadth = bre;
+}
+public void <SET>Height( double hei )
+{
+height = hei;
+}
+// Overload + operator to add two Rectangle objects.
+public Shared Rectangle operator+ (Rectangle b, Rectangle c)
+{
+Rectangle Rectangle <NEW>Rectangle();
+Rectangle.length = b.length + c.length;
+Rectangle.breadth = b.breadth + c.breadth;
+Rectangle.height = b.height + c.height;
+return Rectangle;
+}
+}
+<CLASS> Tester
+{
+public FLOAT CDollar-MAIN()
+{
+Rectangle rectangle1 <NEW>Rectangle(); // Declare rectangle1 of type Rectangle
+Rectangle rectangle2 <NEW>Rectangle(); // Declare rectangle2 of type Rectangle
+Rectangle rectangle3 <NEW>Rectangle(); // Declare rectangle3 of type Rectangle
+double volume = 0.0; // Store the volume of a Rectangle here
+// Rectangle 1 specification
+rectangle1.<SET>Length(6.0);
+rectangle1.<SET>Breadth(7.0);
+rectangle1.<SET>Height(5.0);
+// Rectangle 2 specification
+rectangle2.<SET>Length(12.0);
+rectangle2.<SET>Breadth(13.0);
+rectangle2.<SET>Height(10.0);
+// volume of Rectangle 1
+volume = rectangle1.GETKEYVolume();
+<PRINTLN>("Volume of rectangle1 : {0}", volume);
+// volume of Rectangle 2
+volume = rectangle2.GETKEYVolume();
+<PRINTLN>("Volume of rectangle2 : {0}", volume);
+// Add two object as follows:
+rectangle3 = rectangle1 + rectangle2;
+// volume of Rectangle 3
+volume = rectangle3.GETKEYVolume();
+<PRINTLN>("Volume of rectangle3 : {0}", volume);
+}
+}
+}
+
+Write a Cdollar Program for BANK SYSTEM SOFTWARE
+
+<CDollar>
+<IMPORT>
+<%
+public class BankSystem <--- Graphics --> <HEAR>, <SEE>
+// extend graphics packages and extend listener
+{
+Shared <Str> s="";
+Shared <COMBOBOX> cb <GWT=8>();
+Shared <TEXTFIELD> l3 <GWT=3> (10);
+Shared <TEXTFIELD> l32 <GWT=3> (10);
+Shared <TEXTFIELD> l33 <GWT=3> (10);
+Shared <TEXTFIELD> l34 <GWT=3> (10);
+Shared <TEXTFIELD> l35 <GWT=3> (10);
+Shared <TEXTFIELD> l36 <GWT=3> (10);
+Shared <COMBOBOX> cb1 <GWT=8>(); Shared <LABEL> t6 <GWT=1> ("ACCOUNT TYPE:");
+Shared <COMBOBOX> cb2 <GWT=8>(); Shared <LABEL> t7 <GWT=1> ("SCHEME:");
+Shared <MENU> m = <NEW> <MENU>();
+Shared <POPUPMENU> mpp = <NEW> <POPUPMENU>();
+Shared <CHECKBOXMENUITEM> mi = <NEW> <CHECKBOXMENUITEM>("EXIT");
+Shared <BUTTON> l31 <GWT=2> ("NEXT SCREEN"); Shared <MENUBAR> mb = <NEW> <MENUBAR>();
+Shared <LABEL> l1 <GWT=1> ("NAME:");
+Shared <LABEL> t1 <GWT=1> ("DATE of Birth:");Shared <LABEL> t2 <GWT=1> ("Citizenship no:");Shared <LABEL> t3 <GWT=1> ("Address:");Shared <LABEL> t4 <GWT=1> ("PhoneNO:");
+Shared <LABEL> t5 <GWT=1> ("AMOUNT:");
+Shared Bank a = <NEW> Bank();
+// Shared means static in java
+Shared Bank a1 = <NEW> Bank();
+// use destructor ~
+~
+{
+a=null;a1=null;cb1=null;cb2=null;
+<RECYCLE>; // perform garbage collection
+}
+Shared <SCROLLBAR> scroll = <NEW> <SCROLLBAR>(<SCROLLBAR>.<Horizontal>,1,1,1,100);
+Shared <SCROLLBAR> scroll1 = <NEW> <SCROLLBAR>(<SCROLLBAR>.<Vertical>,1,1,1,100);
+public void CDOLLAR-Main( )
+{
+<RECYCLE>;
+a.<SIZE>(1000,900);
+a.<FLOWLAYOUT>
+m.add(mi);
+mb.add(m);
+mi.<IT>(a);
+a.add(scroll);
+a.add(scroll1);
+cb.add("1.Create A/C");
+cb.add("2.Update A/C");
+cb.add("3.Transcat A/C");
+cb.add("4.Detail A/c");
+cb.add("5.Remove A/c");
+cb.add("6.View A/c");
+cb.add("7.Exit A/c");
+a.add(cb);cb.<SOUND>(a);
+<AList> t = <NEW> <AList>(); // add some arraylist elements
+t.add("Fixed Deposit for 1 year");
+t.add("Fixed Deposit for 2 year");
+t.add("Fixed Deposit for 3 year");
+<WR> it= t.record(); // simillar to iterator statement in java
+<STRUCTURE> <<Str>> list = <NEW> <STRUCTURE> <<Str>>("----CHOOSE ONLY ONE OPTION---"); // simillar to structure in C p.l
+while(it.<HAS>)
+{
+<OBJECT> el=it.<NEXT>;
+list.add(el.StringConvert());
+}
+for (int i = 0; i NOT= list.size(); i = i + 1)
+{
+<OBJECT> el=list.ret(i);
+cb2.add(el.StringConvert());
+}
+a.add(l31);
+//a.<ADJUSTMENTLISTENER>(<ADJUSTSCROLLBAR>{});
+a.<VISIBLE=TRUE>
+}
+<ACTIONPERFORMED>
+{
+if (e.getSource().<EQUALS>(l31))
+{
+if ( s=="1.Create A/C")
+{
+a.<VISIBLE=FALSE>
+a1.add(l1);
+a1.add(l3);
+a1.add(t1);a1.add(l32);
+a1.add(t2);a1.add(l33);
+a1.add(t3);a1.add(l34);
+a1.add(t4);a1.add(l35);
+a1.add(t5);a1.add(l36);
+cb1.add("SAVING A/C");
+cb1.add("CURRENT A/C");
+a1.add(t6);<RECYCLE>;
+a1.add(cb1);cb1.<SOUND>(a1);
+// simillar to itemlistener in java
+a1.add(t7);
+a1.add(cb2);cb2.<SOUND>(a1);
+<RECYCLE>;
+a1.<SIZE>(1000,900);
+a1.<GRIDLAYOUT>(8,2));
+// perform gridlayout
+a1.<VISIBLE=TRUE>
+}
+}
+}
+<ITEMSTATECHANGED>
+{
+if (ie.<ITEMSELECTABLE> == cb)
+s=((<COMBOBOX>) ie.<ITEMSELECTABLE>).<SELECTITEM>;
+<REPAINT>
+}
+Shared class Bank <--- BankSystem
+{
+<PAINT>
+{
+<SETFOREGROUND>(COLOR=blue);
+<SETBACKGROUND>(COLOR=blue);
+<FILLRECT> (0,0,1200,1200);
+<SETCOLOUR>(COLOR=white);
+<DRAWTEXT>("CUSTOMER ACCOUNT BANKING MANAGEMENT SYSTEM",450,200);
+<DRAWTEXT>("---------------------------------------------",450,230);
+<DRAWTEXT>(" W E L C O M E T O M A I N M E N U",450,280);
+<DRAWTEXT>(" 1. Create New Account",450,330);
+<DRAWTEXT>(" 2. Update INFORMATION of the Existing Account",450,360);
+<DRAWTEXT>(" 3. For Transcations",450,390);
+<DRAWTEXT>(" 4. Check the details of the existing Account",450,420);
+<DRAWTEXT>(" 5. Removing Existing Account",450,450);
+<DRAWTEXT>(" 6. View Customer's List",450,480);
+<DRAWTEXT>(" 7. Exit",450,520);
+<DRAWTEXT>("Enter Your CHOICE [1,2,3,4,5,6,7]",150,620);
+<DRAWTEXT>(s+" IS SELECTED",450,620);
+<SETCOLOUR>(COLOR=white);
+cb.<SET><BOUNDS>(170,620,100,50);
+l31.<SET><BOUNDS>(600,620,100,50);
+<BARS>(mb);
+l31.<IT>(<IS>);
+screen1(g);
+}
+<ADJUSTSCROLLBAR>
+{
+if (<ADJUSTABLE>==scroll)
+scroll1.<SET>Value(scroll.getValue());
+}
+public void screen1(<DRAW> g)
+{
+if ( s=="1.Create A/C")
+{
+<SETFOREGROUND>(COLOR=blue);
+<SETBACKGROUND>(COLOR=blue);
+<FILLRECT> (0,0,1200,1200);
+<SETCOLOUR>(COLOR=white);
+<DRAWTEXT>("CUSTOMER ACCOUNT BANKING MANAGEMENT SYSTEM",450,200);
+<DRAWTEXT>("---------------------------------------------",450,230);
+l1.<SET><BOUNDS>(100,200-100,100,50);
+l3.<SET><BOUNDS>(300,200-100,100,50);
+t1.<SET><BOUNDS>(100,300-150,100,50);
+l32.<SET><BOUNDS>(300,300-150,100,50);
+t2.<SET><BOUNDS>(100,400-150,100,50);
+l33.<SET><BOUNDS>(300,400-150,100,50);
+//simillar to set bounds in java
+t3.<SET><BOUNDS>(100,500-150,100,50);
+l34.<SET><BOUNDS>(300,500-150,100,50);
+t4.<SET><BOUNDS>(100,600-150,100,50);
+l35.<SET><BOUNDS>(300,600-150,100,50);
+t5.<SET><BOUNDS>(100,700-150,100,50);
+l36.<SET><BOUNDS>(300,700-150,100,50);
+t6.<SET><BOUNDS>(600,200-150,100,50);
+cb1.<SET><BOUNDS>(700,200-100,100,50);
+t7.<SET><BOUNDS>(600,300-150,100,50);
+cb2.<SET><BOUNDS>(700,300-150,100,50);
+}
+}
+}
+}
+%>
+?>
+
+Note:  This   is   used   for  Software   Developemnt  Purpose.
