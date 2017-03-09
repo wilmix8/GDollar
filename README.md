@@ -21,9 +21,6 @@ How GDOLLAR P.L Works?
 ––––––––––––––––––––––––––––––––-
 At  first  .gdollar  is compiled by GDOLLARc compiler
 
-After that GDOLLARc  convert to  bytecode (class files )and  it  use
-GDOLLAR-JAVA Runtime   to run the Program.
-
 
 GDOLLAR ADvantages over JAVA and other Programming Languages
 ----------------------------------------------------------------------------------
@@ -68,3 +65,6 @@ DD)  GDollar  is used   in  compiler design  and  datastructures construction.
 
 
 Note:gdollar project is started at google code and it is modified at github.
+
+note:  Gdollar  source   code  is  expected  to  change  since  .dll  is  best  one  than  .class file..
+
