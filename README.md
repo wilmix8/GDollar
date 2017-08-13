@@ -70,7 +70,7 @@ Note:  Gdollar  source   code  is  expected  to  change  since  .dll  is  best  
 
 Kindly visit our url given below for more details about latest information updates...
 
-GDOLLAR PROGRAMMING TUTORIAL URL: https://wilmixsolomon555.wixsite.com/jittutorial/gdollarprogrammingtutorial
+Gdollar Programming Tutorial URL: https://wilmixsolomon555.wixsite.com/jittutorial/gdollarprogrammingtutorial
 
 
 
