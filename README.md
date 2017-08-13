@@ -66,5 +66,11 @@ DD)  GDollar  is used   in  compiler design  and  datastructures construction.
 
 Note:gdollar project is started at google code and it is modified at github.
 
-note:  Gdollar  source   code  is  expected  to  change  since  .dll  is  best  one  than  .class file..
+Note:  Gdollar  source   code  is  expected  to  change  since  .dll  is  best  one  than  .class file..
+
+Kindly visit our url given below for more details about latest information updates...
+
+GDOLLAR PROGRAMMING TUTORIAL URL: https://wilmixsolomon555.wixsite.com/jittutorial/gdollarprogrammingtutorial
+
+
 
